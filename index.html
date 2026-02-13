@@ -106,24 +106,24 @@
   <div class="popup">
     <span class="close-btn" onclick="closePopup()">&times;</span>
     <h2>Call Back Request</h2>
+<form id="callbackForm">
+  
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Call Back Request!">
 
-    <form action="https://formsubmit.co/ykgncompu12@gmail.com" method="POST">
-      
-      <!-- Hidden Settings -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="New Call Back Request!">
-      <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="./">
+  <label>Your Name</label>
+  <input type="text" name="Name" required>
 
+  <label>Your Mobile</label>
+  <input type="tel" name="Mobile" required>
 
-      <label>Your Name</label>
-      <input type="text" name="Name" required>
+  <button type="submit" class="btn">Request Call</button>
 
-      <label>Your Mobile</label>
-      <input type="tel" name="Mobile" required>
+  <p id="thankMsg" style="color:green; display:none; margin-top:10px;">
+    ✅ Thank you! We will call you soon.
+  </p>
+</form>
 
-      <button type="submit" class="btn">Request Call</button>
-    </form>
   </div>
 </div>
 
@@ -200,16 +200,24 @@
 </style>
 
 <script>
-window.onload = function() {
-  setTimeout(function() {
-    document.getElementById("popupOverlay").style.display = "flex";
-  }, 2000); // 2 second delay
-};
+document.getElementById("callbackForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-function closePopup() {
-  document.getElementById("popupOverlay").style.display = "none";
-}
+  let formData = new FormData(this);
+
+  fetch("https://formsubmit.co/ykgncompu12@gmail.com", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => {
+    document.getElementById("thankMsg").style.display = "block";
+    document.getElementById("popupOverlay").style.display = "none";
+    localStorage.setItem("formSubmitted", "true");
+  })
+  .catch(error => alert("Something went wrong!"));
+});
 </script>
+
 
 
 
@@ -220,5 +228,6 @@ function closePopup() {
 </body>
 
 </html>
+
 
 
