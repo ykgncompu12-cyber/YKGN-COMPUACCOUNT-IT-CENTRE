@@ -156,10 +156,21 @@ document.getElementById("leadForm").addEventListener("submit", function(e){
     }
   });
 });
+    // Agar pehle hi form submit ho chuka hai to popup hide
+if(localStorage.getItem("leadDone")){
+  document.getElementById("leadPopup").style.display = "none";
+}
+
+// Form submit hone par
+document.getElementById("leadForm").addEventListener("submit", function(){
+  localStorage.setItem("leadDone","yes");
+});
+
 </script>
 
 </body>
 </html>
+
 
 
 
