@@ -107,7 +107,7 @@
     <span class="close-btn" onclick="closePopup()">&times;</span>
     <h2>Call Back Request</h2>
 <form id="callbackForm">
-  
+
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_subject" value="New Call Back Request!">
 
@@ -122,112 +122,41 @@
   <p id="thankMsg" style="color:green; display:none; margin-top:10px;">
     ✅ Thank you! We will call you soon.
   </p>
+
 </form>
 
-  </div>
-</div>
-
-<style>
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.popup {
-  background: #fff;
-  width: 350px;
-  padding: 25px;
-  border-radius: 8px;
-  position: relative;
-  animation: fadeIn 0.4s ease;
-}
-
-.popup h2 {
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-
-.popup label {
-  font-size: 14px;
-  display: block;
-  margin-top: 10px;
-}
-
-.popup input[type="text"],
-.popup input[type="tel"] {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.btn {
-  margin-top: 15px;
-  width: 100%;
-  padding: 10px;
-  background: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background: #0056b3;
-}
-
-.close-btn {
-  position: absolute;
-  right: 12px;
-  top: 10px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: scale(0.9);}
-  to {opacity: 1; transform: scale(1);}
-}
-</style>
-
 <script>
-document.getElementById("callbackForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
 
-  let formData = new FormData(this);
+  const form = document.getElementById("callbackForm");
 
-  fetch("https://formsubmit.co/ykgncompu12@gmail.com", {
-    method: "POST",
-    body: formData,
-    headers: {
-      'Accept': 'application/json'
-    }
-  })
-  .then(response => {
-    if (response.ok) {
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-      // Optional thank you message
+    let formData = new FormData(form);
+
+    fetch("https://formsubmit.co/ajax/ykgncompu12@gmail.com", {
+      method: "POST",
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+
+      // Thank you message show
       document.getElementById("thankMsg").style.display = "block";
 
-      // 1.5 second baad homepage redirect
+      // Redirect after 1.5 sec
       setTimeout(function(){
-        window.location.href = "https://ykgncompu12-cyber.github.io/YKGN-COMPUACCOUNT-IT-CENTRE/index.html";
+        window.location.replace("https://ykgncompu12-cyber.github.io/YKGN-COMPUACCOUNT-IT-CENTRE/");
       }, 1500);
 
-    } else {
-      alert("Submission failed!");
-    }
-  })
-  .catch(error => alert("Something went wrong!"));
+    })
+    .catch(error => {
+      alert("Something went wrong!");
+    });
+
+  });
+
 });
 </script>
 
@@ -242,6 +171,7 @@ document.getElementById("callbackForm").addEventListener("submit", function(e) {
 </body>
 
 </html>
+
 
 
 
