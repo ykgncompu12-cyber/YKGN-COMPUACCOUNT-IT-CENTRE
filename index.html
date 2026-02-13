@@ -143,32 +143,33 @@ z-index:99999;">
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
-  // Agar pehle submit ho chuka hai to popup hide
-  if(localStorage.getItem("leadSubmitted") === "true"){
-    document.getElementById("leadPopup").style.display = "none";
-  }
-
+  const popup = document.getElementById("leadPopup");
   const form = document.getElementById("leadForm");
 
+  // Agar already submit ho chuka hai
+  if(localStorage.getItem("leadSubmitted") === "true"){
+      popup.style.display = "none";
+  }
+
   form.addEventListener("submit", function(e){
-    e.preventDefault();
+      e.preventDefault();
 
-    let formData = new FormData(form);
+      let formData = new FormData(form);
 
-    fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      if(data.success){
-        localStorage.setItem("leadSubmitted", "true"); // save flag
-        document.getElementById("leadPopup").style.display = "none";
-      } else {
-        alert("Submission failed");
-      }
-    })
-    .catch(error => alert("Error occurred"));
+      fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+          if(data.success){
+              localStorage.setItem("leadSubmitted", "true");
+              popup.style.display = "none";
+          } else {
+              alert("Submission failed");
+          }
+      })
+      .catch(error => alert("Error occurred"));
   });
 
 });
@@ -177,9 +178,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
 </body>
 
 </html>
+
 
 
 
