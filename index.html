@@ -100,92 +100,85 @@
             </div>
         </showcase>
         <!-- END OF SHOWCASE -->
-         <!--popup Form -->
-<!-- Lead Popup -->
-<div id="leadPopup" class="popup">
-  <div class="popup-content">
-    <h2>Enter Details to Continue</h2>
-    
-    <form id="leadForm">
-      <input type="hidden" name="access_key" value="985c68aa-59c7-48bf-a4b3-6b08a2874b58">
-
-      <input type="text" name="name" placeholder="Enter Your Name" required>
-      <input type="tel" name="phone" placeholder="Enter Contact Number" required>
-
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-</div>
-
-<style>
-.popup {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.popup-content {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  width: 300px;
-}
-
-.popup input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-.popup button {
-  padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-</style>
-
-<script>
-window.onload = function() {
-    document.getElementById("leadForm").addEventListener("submit", function(e){
-        e.preventDefault();
-
-        let formData = new FormData(this);
-
-        fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if(data.success){
-                document.getElementById("leadPopup").style.display = "none";
-            }
-        })
-        .catch(error => console.log(error));
-    });
-};
-</script>
-
-
-
-
-
-
-<!--End of popup-->
          <footer>
        <p>© 2024 YKGN Computer Accounts & IT Center | All Rights Reserved</p>
          </footer>
+      <!--popup Form -->
+    <!-- LEAD POPUP START -->
+<div id="leadPopup" style="
+position: fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: rgba(0,0,0,0.8);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;">
+
+  <div style="
+  background:#fff;
+  padding:30px;
+  border-radius:10px;
+  text-align:center;
+  width:320px;">
+
+    <h2>Enter Details to Continue</h2>
+
+    <form id="leadForm">
+      <input type="hidden" name="access_key" value="985c68aa-59c7-48bf-a4b3-6b08a2874b58">
+
+      <input type="text" name="name" placeholder="Your Name" required 
+      style="width:100%;padding:10px;margin:10px 0;">
+
+      <input type="tel" name="phone" placeholder="Contact Number" required 
+      style="width:100%;padding:10px;margin:10px 0;">
+
+      <button type="submit" 
+      style="padding:10px 20px;background:#007bff;color:white;border:none;cursor:pointer;">
+      Submit
+      </button>
+    </form>
+
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.getElementById("leadForm");
+
+  form.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      let formData = new FormData(form);
+
+      fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+          if(data.success){
+              document.getElementById("leadPopup").style.display = "none";
+          } else {
+              alert("Submission failed");
+          }
+      })
+      .catch(error => {
+          alert("Error occurred");
+      });
+  });
+
+});
+</script>
+<!-- LEAD POPUP END -->
+
 </body>
 
 </html>
+
 
 
 
