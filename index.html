@@ -143,6 +143,11 @@ z-index:99999;">
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
+  // Agar pehle submit ho chuka hai to popup hide
+  if(localStorage.getItem("leadSubmitted") === "true"){
+    document.getElementById("leadPopup").style.display = "none";
+  }
+
   const form = document.getElementById("leadForm");
 
   form.addEventListener("submit", function(e){
@@ -157,6 +162,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(response => response.json())
     .then(data => {
       if(data.success){
+        localStorage.setItem("leadSubmitted", "true"); // save flag
         document.getElementById("leadPopup").style.display = "none";
       } else {
         alert("Submission failed");
@@ -170,9 +176,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
 </body>
 
 </html>
+
 
 
 
