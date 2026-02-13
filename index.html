@@ -153,24 +153,27 @@
 </style>
 
 <script>
-document.getElementById("leadForm").addEventListener("submit", function(e){
-    e.preventDefault();
+window.onload = function() {
+    document.getElementById("leadForm").addEventListener("submit", function(e){
+        e.preventDefault();
 
-    let formData = new FormData(this);
+        let formData = new FormData(this);
 
-    fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if(data.success){
-            document.getElementById("leadPopup").style.display = "none";
-        }
-    })
-    .catch(error => console.log(error));
-});
+        fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.success){
+                document.getElementById("leadPopup").style.display = "none";
+            }
+        })
+        .catch(error => console.log(error));
+    });
+};
 </script>
+
 
 
 
@@ -183,6 +186,7 @@ document.getElementById("leadForm").addEventListener("submit", function(e){
 </body>
 
 </html>
+
 
 
 
