@@ -121,24 +121,20 @@ z-index:99999;">
   <div style="background:#fff;padding:30px;border-radius:10px;text-align:center;width:320px;">
 
     <h2>Enter Details to Continue</h2>
+<form action="https://api.web3forms.com/submit" method="POST">
 
-    <form id="leadForm">
-      <input type="hidden" name="access_key" value="985c68aa-59c7-48bf-a4b3-6b08a2874b58">
-      <input type="hidden" name="subject" value="New Lead from Website">
+<input type="hidden" name="access_key" value="985c68aa-59c7-48bf-a4b3-6b08a2874b58">
 
-      <input type="text" name="name" placeholder="Your Name" required
-      style="width:100%;padding:10px;margin:10px 0;">
+<!-- IMPORTANT LINE -->
+<input type="hidden" name="redirect" value="https://ykgncompu12-cyber.github.oi/YKGN-COMPUACCOUNT-IT-CENTRE/.com/">
 
-      <input type="tel" name="phone" placeholder="Contact Number" required
-      style="width:100%;padding:10px;margin:10px 0;">
+<input type="text" name="name" required>
+<input type="text" name="phone" required>
 
-      <input type="hidden" name="email" value="lead@website.com">
+<button type="submit">Submit</button>
 
-      <button type="submit"
-      style="padding:10px 20px;background:#007bff;color:white;border:none;cursor:pointer;">
-      Submit
-      </button>
-    </form>
+</form>
+
 
   </div>
 </div>
@@ -183,6 +179,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </body>
 
 </html>
+
 
 
 
