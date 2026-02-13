@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YKGN COMPU ACCOUNT & IT CENTRE</title>
 <link rel="stylesheet" href="ykgn.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
 </head>
 <body>
     
@@ -146,7 +149,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const popup = document.getElementById("leadPopup");
   const form = document.getElementById("leadForm");
 
-  // Agar already submit ho chuka hai
   if(localStorage.getItem("leadSubmitted") === "true"){
       popup.style.display = "none";
   }
@@ -165,11 +167,9 @@ document.addEventListener("DOMContentLoaded", function() {
           if(data.success){
               localStorage.setItem("leadSubmitted", "true");
               popup.style.display = "none";
-          } else {
-              alert("Submission failed");
+              form.reset();
           }
-      })
-      .catch(error => alert("Error occurred"));
+      });
   });
 
 });
@@ -179,9 +179,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
 </body>
 
 </html>
+
 
 
 
