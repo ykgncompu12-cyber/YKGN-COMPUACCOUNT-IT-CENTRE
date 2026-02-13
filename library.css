@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    color: white;
+    text-align: center;
+    padding: 50px 10px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Library Section */
+.library-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.library-box {
+    background: white;
+    width: 260px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.library-box:hover {
+    transform: translateY(-6px);
+}
+
+.library-box h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+.library-box p {
+    font-size: 14px;
+    color: #555;
+    margin: 15px 0;
+}
+
+.library-box button {
+    background: #2193b0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.library-box button:hover {
+    background: #6dd5ed;
+    color: black;
+}
+
+/* Footer */
+.footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}

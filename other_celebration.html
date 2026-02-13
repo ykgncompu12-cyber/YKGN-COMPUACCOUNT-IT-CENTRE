@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collge Advertisment</title>
+    <link rel="stylesheet" href="National_festivals.css">
+</head>
+<body>
+    <div class="gallery">
+
+  
+  <img src="./children.jpeg" onclick="openImg(this.src)">
+  <video src="./ocv1.mp4" onclick="openImg(this.src)" controls></video>
+  <video src="./ocv2.mp4" onclick="openImg(this.src)" controls></video>
+</div>
+
+<!-- Full Screen Popup -->
+<div id="popup">
+  <span onclick="closeImg()">×</span>
+  <img id="bigImg"
+  style="display: none;">
+  <video id="bigVideo"
+  controls style="display: none;"></video>
+</div>
+
+<script>
+function openImg(src){
+  document.getElementById("popup").style.display="flex";
+  if(src.endsWith(".mp4")){
+    document.getElementById("bigVideo");
+    video.style.display="block";
+    video.src = src;
+    video.play();
+  } else{
+    document.getElementById
+    ("bigVideo").style.display="none";
+    let img = document.getElementById("bigImg");
+    img.style.display="block";
+    img.src = src;
+  }
+}
+function closeImg(){
+  document.getElementById("popup").style.display="none";
+  document.getElementById("bigVideo").pause();
+}
+</script>
+
+</body>
+</html>

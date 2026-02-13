@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picnic Time</title>
+    <link rel="stylesheet" href="National_festivals.css">
+</head>
+<body>
+    <div class="gallery">
+  <img src="./p12.jpeg" onclick="openImg(this.src)">
+  <img src="./p14.jpeg" onclick="openImg(this.src)">
+  <img src="./p3.jpeg" onclick="openImg(this.src)">
+  <img src="./p4.jpeg" onclick="openImg(this.src)">
+  <img src="./p5.jpeg" onclick="openImg(this.src)">
+   <img src="./p8.jpeg" onclick="openImg(this.src)">
+   <img src="./p10.jpeg" onclick="openImg(this.src)">
+    <img src="./p15.jpeg" onclick="openImg(this.src)">
+<img src="./p6.jpeg" onclick="openImg(this.src)">
+ <img src="./p9.jpeg" onclick="openImg(this.src)">
+</div>
+
+<!-- Full Screen Popup -->
+<div id="popup">
+  <span onclick="closeImg()">×</span>
+  <img id="bigImg">
+</div>
+
+<script>
+function openImg(src){
+  document.getElementById("popup").style.display="flex";
+  document.getElementById("bigImg").src = src;
+}
+function closeImg(){
+  document.getElementById("popup").style.display="none";
+}
+</script>
+
+</body>
+</html>

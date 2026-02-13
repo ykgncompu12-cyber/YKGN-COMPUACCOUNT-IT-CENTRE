@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YKGN COMPU ACCOUNT & IT CENTRE</title>
+<link rel="stylesheet" href="ykgn.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <!--navigation-->
+        <nav>
+            <img src="./college_logo.jpeg" class="img" alt="logo">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutnew.html">ABOUT</a></li>
+                <li><a href="courses.html">COURSES</a></li>
+                <li><a href="gallerynew.html">GALLERY</a></li>
+                <li><a href="pages.html">PAGES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <!--END OF NAVIGATION-->
+        <div class="hero">
+        <div class="section">
+            <h1 style="color: black;">WE ENSURE A BETTER COMPUTER EDUCATION <BR>FOR A BETTER WORLD</h1><br><br><br><br><br><br><br>
+            
+            <a href="Get_started.html"><button class="btn-1">GET STARTED</button></a>
+<!--FEATURES-->
+            <div class="features">
+                <a href="bridge.html"><button>Bridge Courses</button></a>
+                <!-- <a href="library.html"><button>Huge Library</button></a> -->
+               <a href="practical.html"><button>Practical Exposure</button></a>
+                 </div>
+<!--END OF FEATURE-->
+            </div> 
+<!--END OF SECTION-->
+        </div>
+        </div>
+<!--END OF WRAPPER-->
+<!-- SHOWCASE -->
+  <section class="ykgn-section">
+  <div class="ykgn-container">
+
+    <h2>YKGN CompuAccounts & IT Centre</h2>
+    <p class="ykgn-tagline">
+      Computer Education • Accounting • Practical Skills
+    </p>
+
+    <p class="ykgn-intro">
+      YKGN CompuAccounts & IT Centre में Computer शिक्षा, Accounting Software
+      एवं Modern Technology के माध्यम से विद्यार्थियों को
+      <strong>100% Practical और Job-Oriented Training</strong> दी जाती है।
+    </p>
+
+    <div class="ykgn-points">
+      <div>✅ Advanced Computer Lab & Latest Technology</div>
+      <div>✅ Busy, Tally, GST, Excel Practical Training</div>
+      <div>✅ Expert Faculty द्वारा व्यक्तिगत मार्गदर्शन</div>
+      <div>✅ Real-World Accounting Exposure</div>
+      <div>✅ Career Support & Bridge Courses</div>
+    </div>
+
+  </div>
+</section>
+            <h1>POPULAR COURSES WE OFFER</h1>
+            <div class="courses">
+                <div class="cs">
+                    <h3>Diploma In Computer Application</h3>
+                    <img src="./dca.jpeg" style="height: 230px; width: 230px; margin-left: 20px;" alt="cs">
+                    <a href="Dca-apply.html"><button class="apply">Apply Here</button></a>
+                </div>
+                <div class="business">
+                    <h3>Post Graduate Diploma In Computer Application</h3>
+                    <img src="./PGDCA.jpg" style="height: 230px; width: 230px;" alt="business">
+                    <a href="pgdca_apply.html"><button class="apply">Apply Here</button></a>
+                </div>
+                <div class="journalism">
+                    <h3>Tally Prime</h3>
+                    <img src="./tally new.jfif" style="height: 230px; width: 230px; margin-top: 20px;"" alt="media">
+                    <a href="Tally_apply.html"><button class="apply">Apply Here</button></a>
+                </div>
+                <div class="arts">
+                    <h3>Busy</h3>
+                    <img src="./busy.jpeg" style="height: 230px; width: 230px; margin-top: 20px;" alt="arts">
+                    <a href="Busy_apply.html"><button class="apply">Apply Here</button></a>
+                </div>
+                <div class="medical">
+                    <h3>MS Office</h3>
+                    <img src="./ms office.jfif"  style="height: 230px; width: 230px; margin-top: 20px;" alt="ms">
+                    <a href="Ms_office_apply.html"><button class="apply">Apply Here</button></a>
+                </div>
+            </div>
+        </showcase>
+        <!-- END OF SHOWCASE -->
+         <footer>
+       <p>© 2026 YKGN Computer Accounts & IT Center | All Rights Reserved</p>
+         </footer>
+         <div class="aaliya">
+          <p style="text-align: right;">For Website Design and Development, Contact:-</p><br>
+       <p style="text-align: right;">Aaliya :- 9302542453</p>
+       </div>
+</body>
+</html>

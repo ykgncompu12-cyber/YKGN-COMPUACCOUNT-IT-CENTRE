@@ -1,0 +1,108 @@
+body{
+  font-family: sans-serif;
+  background:linear-gradient(135deg,#74ABE2,#5563DE);
+   margin: 50px;
+    padding-top: 90px;
+    margin-top: 0;
+}
+      .wrapper{
+        background: url()
+        no-repeat center center;
+        min-height: 30rem;
+    }
+        nav{
+        width: 100%;
+        height: 80px;
+        background-color: #0005;
+        line-height: 80px;
+        position: fixed;
+        top: 0;
+    }
+    h2{
+      margin-top: 20px;
+    }
+
+    nav ul{
+        float: right;
+        margin: 0;
+        margin-right: 1.9rem;
+
+    }
+
+    nav ul li{
+        list-style-type: none;
+        display: inline-block;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: #fff;
+        padding: 20px;
+    }
+    img{
+        width: 14%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    nav ul li:hover{
+        background-color: maroon;
+        color: #000;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+/* Cards Container */
+.pages{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+  margin-top: 30px;
+}
+
+/* Card Design */
+.card{
+  width:250px;
+  background:white;
+  color:black;
+  border-radius:15px;
+  padding:20px;
+  text-decoration:none;
+  box-shadow:0 10px 20px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.card img{
+  width:60px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  margin:10px 0 5px;
+  font-size:20px;
+}
+
+.card p{
+  font-size:14px;
+  color:gray;
+}
+
+/* Hover Effect */
+.card:hover{
+  transform:translateY(-10px) scale(1.05);
+}
+
+/* Color Themes */
+.fb{ border-top:5px solid #1877f2; }
+.insta{ border-top:5px solid #e1306c; }
+.wa{ border-top:5px solid #25d366; }
+.gallery-footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+.aaliya{
+    line-height: 1px;
+}

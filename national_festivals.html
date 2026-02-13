@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National_festivals</title>
+    <link rel="stylesheet" href="National_festivals.css">
+</head>
+<body>
+    <div class="gallery">
+
+  <img src="./r1.jpeg" onclick="openImg(this.src)">
+<img src="./r15.jpeg" onclick="openImg(this.src)">
+  <img src="./r16.jpeg" onclick="openImg(this.src)">
+  <img src="./r21.jpeg" onclick="openImg(this.src)">
+  <img src="./r22.jpeg" onclick="openImg(this.src)">
+   <img src="./r25.jpeg" onclick="openImg(this.src)">
+  <img src="./r28.jpeg" onclick="openImg(this.src)">
+      <img src="./in2.jpeg" onclick="openImg(this.src)">
+      <img src="./in3.jpeg" onclick="openImg(this.src)">
+      <img src="./in4.jpeg" onclick="openImg(this.src)">
+      <img src="./r32.jpeg" onclick="openImg(this.src)">
+  <img src="./r12.jpeg" onclick="openImg(this.src)">
+   <img src="./r23.jpeg" onclick="openImg(this.src)">
+</div>
+
+<!-- Full Screen Popup -->
+<div id="popup">
+  <span onclick="closeImg()">×</span>
+  <img id="bigImg">
+</div>
+
+<script>
+function openImg(src){
+  document.getElementById("popup").style.display="flex";
+  document.getElementById("bigImg").src = src;
+}
+function closeImg(){
+  document.getElementById("popup").style.display="none";
+}
+</script>
+
+</body>
+</html>
