@@ -121,16 +121,10 @@ z-index:99999;">
   <div style="background:#fff;padding:30px;border-radius:10px;text-align:center;width:320px;">
 
     <h2>Enter Details to Continue</h2>
-<form action="https://api.web3forms.com/submit" method="POST">
-
+<form id="leadForm">
 <input type="hidden" name="access_key" value="985c68aa-59c7-48bf-a4b3-6b08a2874b58">
-
-<!-- IMPORTANT LINE -->
-<input type="hidden" name="redirect" value="https://ykgncompu12-cyber.github.oi/YKGN-COMPUACCOUNT-IT-CENTRE/">
-
-<input type="text" placeholder="Enter your Name" name="name" required>
-<input type="text" placeholder="Contact Number" name="phone" required>
-
+<input type="hidden" name="subject" value="New Lead from Website">
+<input type="hidden" name="email" value="lead@website.com">
 <button type="submit">Submit</button>
 
 </form>
@@ -140,37 +134,27 @@ z-index:99999;">
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+document.getElementById("leadForm").addEventListener("submit", function(e){
+  e.preventDefault();
 
-  const popup = document.getElementById("leadPopup");
-  const form = document.getElementById("leadForm");
+  let formData = new FormData(this);
 
-  if(localStorage.getItem("leadSubmitted") === "true"){
-      popup.style.display = "none";
-  }
-
-  form.addEventListener("submit", function(e){
-      e.preventDefault();
-
-      let formData = new FormData(form);
-
-      fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
-          if(data.success){
-              localStorage.setItem("leadSubmitted", "true");
-              popup.style.display = "none";
-              form.reset();
-          }
-      });
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    if(data.success){
+      document.getElementById("leadPopup").style.display = "none";
+    }
   });
 });
 </script>
+
 </body>
 </html>
+
 
 
 
